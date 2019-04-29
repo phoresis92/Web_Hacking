@@ -1,0 +1,28 @@
+19_브루트포스 공격대응
+
+Medium
+
+View Source
+	// Login failed
+	sleep{2};
+	echo "<pre> password incorrect. </pre>";
+
+=> 딜레이를 이용해 brute force 공격 지연
+
+High
+
+View Source
+	// Login failed
+	sleep{rand(0,3)};
+	echo "<pre> password incorrect. </pre>";
+	
+=> 일정한 시간을 주게되면 해커 입장에서 틀린비밀번호임을 예상할 수 있기 때문
+
+Impossible
+
+the account has been locked because of too many failed logins.
+If this is the case, please try again in 15 minutes.
+
+=> 락킹( Locking ) 을 이용해 brute force를 거의 완전하게 막을 수 있다.
+* 그러나 악의적으로 특정 사용자의 아이디를 입력해 사용자가 사이트를 일정시간동안 이용하지 못하도록 하게 만들 수 있다.
+* CAPTCHA 를 사용하여 사람이 직접 로그인 하는 것인지 확인할 수 있게 한다.

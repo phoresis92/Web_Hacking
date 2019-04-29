@@ -1,0 +1,27 @@
+12_HTTP프록시와 버프스위트2
+
+Target > Site map
+ - 접속한 호스트들과 url을 트리형태로 보여줌
+ - 직접 방문한 사이트 BOLD
+ - 그 외 호스트들은 HTTP메세지를 분석하여 안에 포함된 링크들을 자동으로 보여줌
+ 
+Proxy > Intercept
+      > HTTP history
+	    - 이전에 접속했던 host url, HTTP [Request, Response] Message History
+      > Spider
+	    - 웹사이트를 분석할 때 사용 Target > Site map 우클릭 Spider this host
+	  > Scanner
+	    - 유료 기능 ... ㅠㅠ
+		- 웹사이트를 분석 보안 취약점을 알려주는 기능
+	  > Intruder
+	    - 요청메세지의 일부분을 지정하여 여러개의 데이터를 반복하여 전송하는 기능
+	    - Positions > Value 에 임의의 데이터를 지정하여 전송
+		- 이러한 테스트 방법 퍼징(purging) 이라함 [brute force 공격에 사용]
+      > Repeater
+	    - Intruder와 비슷 하지만 수동으로 테스트시 유용
+		- Proxy > HTTP history 우클릭 Send To Repeater
+		- Repeater Tab에 등록 Go 버튼으로 Response 확인
+
+Help > Burp Suite Documentation 참조
+
+* 버프스위트 사용하지 않을 때 No Proxy 설정 변경

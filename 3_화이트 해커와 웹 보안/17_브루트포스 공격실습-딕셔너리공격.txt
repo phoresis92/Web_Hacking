@@ -1,0 +1,13 @@
+18_브루트포스 공격실습-딕셔너리공격
+
+# vim /usr/share/john/password.lst
+=> 딕셔너리 파일
+
+통계적으로 많이쓰는 패스워드를 사용
+
+Intruder > Payloads
+ - Payload type : Simple list
+ - Payload Options : [Load] /usr/share/john/password.lst
+ 
+Response Length가 다른 하나를 비밀번호로 의심해볼 수 있다.
+

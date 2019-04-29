@@ -1,0 +1,41 @@
+15_브루트포스 공격이란
+
+브루트포스(brute force) 공격
+ - 사용자 패스워드를 알아내기 위한 공격
+ - 무식하게 패스워드를 계속 대입
+   + 알파벳 순
+   + 딕셔너리 공격(자주사용하는 패스워드)
+
+=============================================
+
+16_브루트포스 공격실습
+---------------------
+ Username : admin
+ Password : password
+---------------------
+
+17_브루트포스 공격실습-자동 브루트 포스 공격
+
+1. Proxy > Intercept
+  - Intercept is off
+
+2. Proxy > HTTP history
+  - 우클릭 Send To Intruder
+  
+3. Intruder > Postions
+  - [Clear $] Button Click
+  - 사용할 변수 선택후 [Add $] Button Click
+  
+4. Intruder > Payloads
+  - Payload type : Brute forcer
+  - Payload options
+    + Character Set : 대입할 글자
+	+ Min length
+	+ Max length
+	
+* Payload Count : 대입할 경우의 수
+* 조합 수가 많아질 수록 brute force 공격에 대비할 수 있다.
+
+Attack > pause 일시정지기능
+
+* 만일 Response length 길이가 다른 하나의 경우 비밀번호가 일치하는 경우 일 수 있음

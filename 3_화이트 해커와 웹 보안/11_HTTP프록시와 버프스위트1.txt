@@ -1,0 +1,42 @@
+11_HTTP프록시와 버프스위트1
+
+HTTP 프록시
+
+ - 사용자
+ 
+    /|
+	 |
+	 |/
+	 
+ - HTTP 프록시
+ 
+    /|
+	 | 인터넷
+	 |/
+	 
+ - 웹서버
+ 
+ --------------------------------
+ 
+버프스위트(burp suite)
+
+Proxy > Options
+=> Running [Check]
+
+FireFox 
+ Advanced > Network >
+ Connection Setting > Manual Proxy Configuration
+ 
+ HTTP Proxy : 127.0.0.1
+ Port : 8080
+ No Proxy for: 내용 지우기
+ 
+
+
+Proxy > Intercept
+=> Request가 intercept 되어 서버로 넘어가지 않음
+   Request를 변조(falsification), 도청(interception) 
+   Forword 또는 Drop 처리가능
+   
+xampp가 stop시
+# /opt/lampp/lampp restart

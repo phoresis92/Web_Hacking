@@ -1,0 +1,13 @@
+2_실습환경 구성
+
+- Virtual Box 설치 
+
+- 칼리리눅스 설치
+
+Guest System <> Host System
+SnapShot을 사용할 수 있기에 유리한점이 많다
+
+- XAMPP 설치
+
+- DVWA 설치 및 구성
+

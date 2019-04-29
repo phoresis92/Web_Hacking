@@ -1,0 +1,37 @@
+6_DVWA설치 및 설정
+
+dvwa (Damn Vulnerable Web App)
+취약하게 만든 웹 환경으로 구성되어 있으며 웹 모의해킹을 진행하기 위해서 사용된다.
+
+
+Go To Application
+phpMyAdmin => databases > Create Database { "key": "dvwa"} > Create
+
+DVWA github
+( 구글의 CAPTCHA 변경으로 업데이트 된 DVWA가 필요함.
+아래 링크의 DVWA를 다운로드 [http://secuacademy.com/files/])
+
+~/Downloads# unzip DVWA-1.9.zip
+~/Downloads# mv DVWA-1.9 /opt/lampp/htdocs/dvwa
+
+접속 경로
+=> localhost/dvwa
+
+reCAPTCHA > google.com/recaptcha/admin
+{type: reCAPTCHA v2}
+=> Site Key / Security Key
+
+# cd /opt/lampp/htdocs/dvwa
+/opt/lampp/htdocs/dvwa# gedit config/config.inc.php
+$_DVWA[ 'recaptcha_public_key' ] = '${Site key}';
+$_DVWA[ 'recaptcha_private_key' ] = '${Security Key}';
+
+$_DVWA[ 'db_password' ] = '';(비워줌)
+
+Writable folder /opt/lampp/htdocs/dvwa/hackable/uploads
+Writable file   /opt/lampp/htdocs/dvwa/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
+----------------------------------------------------------------------------------
+# chmod 777 /opt/lampp/htdocs/dvwa/hackable/uploads
+# chmod 777 /opt/lampp/htdocs/dvwa/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
+
+[Create / Reset Database] Click Button

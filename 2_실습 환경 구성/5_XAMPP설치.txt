@@ -1,0 +1,28 @@
+5_XAMPP 설치
+
+Apache + MariaDB + PHP + Perl
+
+apachefriends.org
+
+version = 5.6.23
+
+DVWA 는 PHP5 에서만 동작
+
+
+~/Downloads# chmod +x ./xampp-linux-5.6.23-0-installer.run
+~/Downloads# ./xampp-linux-5.6.23-0-installer.run
+
+=> default SetUp
+
+================================================
+
+설정 윈도우 파일
+# /opt/lampp/manager-linux.run
+
+# vim /opt/lampp/etc/php.ini
+=> allow_url_include = On
+File Inclusion 공격에 사용될 것
+
+
+MySQL Database    > start
+Apache Web Server > start
